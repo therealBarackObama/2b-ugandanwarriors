@@ -1,2 +1,18 @@
 @charset "UTF-8";
 /* CSS Document */
+.body {
+	background-image: url("https://i.pinimg.com/originals/f9/d9/b3/f9d9b35f40cdc6c4b00c65540676e15f.jpg");
+	background-size: cover;
+	background-position: top;
+	width: auto;
+	height: auto;
+}
+.button {
+	font-size: 24px;
+	background-image: url("images/startbutton.jpg");
+	background-size: cover;
+	background-position: center;
+	border: solid;
+	width: 100px;
+	height: 100px;
+}
