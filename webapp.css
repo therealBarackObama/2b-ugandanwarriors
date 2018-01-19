@@ -1,15 +1,2 @@
 @charset "UTF-8";
 /* CSS Document */
-.body {
-	background-color: white;
-	background-image: url("https://media.giphy.com/media/LqafmeaBVxCRG/giphy.gif");
-	background-size: cover;
-}
-.button {
-	font-size: 20px;
-	color: white;
-	background-color: red;
-	border-style: solid;
-	border-color: black;
-	border-radius: 10px;
-}
