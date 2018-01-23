@@ -1,5 +1,12 @@
 @charset "UTF-8";
 /* CSS Document */
+.box{
+	background-color: rgba(15,126,238,1.00);
+	background-position: center;
+	background-size: auto;
+	width: 500px;
+	height: 700px;	
+}
 .body {
 	background-image: url("https://i.pinimg.com/originals/f9/d9/b3/f9d9b35f40cdc6c4b00c65540676e15f.jpg");
 	background-size: cover;
@@ -7,12 +14,11 @@
 	width: auto;
 	height: auto;
 }
-.button {
-	font-size: 24px;
-	background-image: url("images/startbutton.jpg");
+.startbutton {
+	background-image: url("images/startbutton.gif");
+	background-color:rgba(0,0,0,0.00);
 	background-size: cover;
-	background-position: center;
-	border: solid;
+	background-position: left;
 	width: 100px;
 	height: 100px;
 }
