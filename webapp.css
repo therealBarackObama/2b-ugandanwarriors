@@ -1,24 +1,28 @@
 @charset "UTF-8";
 /* CSS Document */
-.box{
-	background-color: rgba(15,126,238,1.00);
+.textbox {
+	background-size: cover;
 	background-position: center;
-	background-size: auto;
-	width: 500px;
-	height: 700px;	
+	background-color: rgba(0,0,0,0.00);
+	border-radius: 10px;
+	border-color: green;
+	border: double;
+	border-width: 10px;
+	position: fixed;
+	margin-left: 30%;
+	margin-right: 30%;
+	width: 600px;
+	height: 900px;	
 }
 .body {
 	background-image: url("https://i.pinimg.com/originals/f9/d9/b3/f9d9b35f40cdc6c4b00c65540676e15f.jpg");
 	background-size: cover;
 	background-position: top;
+	background-repeat:no-repeat;
 	width: auto;
 	height: auto;
 }
 .startbutton {
-	background-image: url("images/startbutton.gif");
-	background-color:rgba(0,0,0,0.00);
-	background-size: cover;
-	background-position: left;
 	width: 100px;
 	height: 100px;
 }
