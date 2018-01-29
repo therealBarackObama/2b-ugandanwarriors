@@ -16,6 +16,7 @@
 	color: white;
 	top: 20px;
 	padding-left: 2px;
+	overflow: auto;
 }
 .textbox p {
 	margin: 5px;
