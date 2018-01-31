@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>testing</title>
+</head>
+
+<body>
+
+    <div id="message1"></div>
+    <div id="message2"></div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#buttonid').on('click', function() {
+                $('#message1').html("first");
+                setTimeout(function(){
+                    $('#message2').html("second");
+                },3000); //second message will appear 3 seconds later
+            });
+        });
+    </script>
+
+</body>
+</html>
