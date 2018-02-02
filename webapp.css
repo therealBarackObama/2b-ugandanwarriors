@@ -23,7 +23,7 @@
 }
 .body {
 	background-color: black;
-	background-image: url("images/space.jpg");
+	background-image: url("images/space3.jpg");
 	background-size: cover;
 	background-repeat:no-repeat;
 	width: 100%;
@@ -72,9 +72,5 @@
 }
 .stats img {
 	width: 24%;
-	height: 100%;
-}
-.stats p {
-	font-size: 30px;	
-	
+	height: 55%;
 }
