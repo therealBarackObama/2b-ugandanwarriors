@@ -35,7 +35,7 @@ function update_scene(s) {
 																						setTimeout(function() {
 																							new_message("You can handle this on your own for a few minutes, right? I'm going to check out those boxes.");
 																								setTimeout(function() {
-																									new_message("FIne, yiu have two minutes. Im counting! - " + playername);
+																									new_message("Fine, you have two minutes. I'm counting! - " + playername);
 																										setTimeout(function() {
 																											new_message("Thanks! - Jonathan runs off");
 																												setTimeout(function() {
@@ -81,39 +81,39 @@ function update_scene(s) {
 																																																																				setTimeout(function() {
 																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
 																									
-					}, 1000);
-						}, 1000);
-							}, 1000);
-								}, 1000);
-									}, 1000);
-										}, 1000);
-											}, 1000);
-												}, 1000);
-													}, 1000);
-														}, 1000);
-															}, 1000);
-																}, 1000);
-																	}, 1000);
-																		}, 1000);
-																			}, 1000);
-																				}, 1000);
-																					}, 1000);
-																						}, 1000);
-																							}, 1000);
-																								}, 1000);
-																									}, 1000);
-																										}, 1000);	
-																											}, 1000);
-																												}, 1000);
-																													}, 1000);
-																														}, 1000);
-																															}, 1000);
-																																}, 1000);
-																																	}, 1000);
-																																		}, 1000);
-																																			}, 1000);
-																																				}, 1000);
-																																					}, 1000);
+					}, 3000);
+						}, 3000);
+							}, 3000);
+								}, 3000);
+									}, 3000);
+										}, 3000);
+											}, 3000);
+												}, 3000);
+													}, 3000);
+														}, 3000);
+															}, 3000);
+																}, 3000);
+																	}, 3000);
+																		}, 3000);
+																			}, 3000);
+																				}, 3000);
+																					}, 3000);
+																						}, 3000);
+																							}, 3000);
+																								}, 3000);
+																									}, 3000);
+																										}, 3000);	
+																											}, 3000);
+																												}, 3000);
+																													}, 3000);
+																														}, 3000);
+																															}, 3000);
+																																}, 3000);
+																																	}, 3000);
+																																		}, 3000);
+																																			}, 3000);
+																																				}, 3000);
+																																					}, 3000);
 	break;
 	}
 }
