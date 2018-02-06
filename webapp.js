@@ -77,13 +77,9 @@ function update_scene(s) {
 																																																																setTimeout(function() {
 																																																																	new_message("I... I can't! AHHH! - Jonathan's hands slip off the pole. He flies right out of the ship.");
 																																																																		setTimeout(function() {
-																																																																			new_message("I... I can't! AHHH! - Jonathan's hands slip off the pole. He flies right out of the ship.");
+																																																																			new_message("NOOO! JONATHAN!!! - " + playername);
 																																																																				setTimeout(function() {
-																																																																					new_message("I... I can't! AHHH! - Jonathan's hands slip off the pole. He flies right out of the ship.");
-																																																																						setTimeout(function() {
-																																																																							new_message("NOOO! JONATHAN!!! - " + playername);
-																																																																								setTimeout(function() {
-																																																																									new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
+																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
 																									
 					}, 1000);
 						}, 1000);
@@ -117,9 +113,7 @@ function update_scene(s) {
 																																		}, 1000);
 																																			}, 1000);
 																																				}, 1000);
-																																					}, 1000);	
-																																						}, 1000);
-																																							}, 1000);
+																																					}, 1000);
 	break;
 	}
 }
