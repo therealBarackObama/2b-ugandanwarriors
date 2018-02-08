@@ -1,21 +1,23 @@
 // JavaScript Document
 
 var playername = "";
+var stagename = ""
 
-// Scrolls to the bottom of the div
-function scrollToBottom(id){
-   var div = document.getElementById(id);
-   div.scrollTop = div.scrollHeight - div.clientHeight;
-}
-
+//Begins the game
 function intro() {
 	confirm("By starting a new game, you will reaplce any old saves. Do you wish to proceed?");
 	playername = prompt("What is your name?");
-	update_scene("start");
+	document.getElementById("stats_name").innerHTML = "Player name : " + playername;
+	stagename = "start";
+	update_scene(stagename);
 }
+
+//Adds to textbox text
 function new_message(msg) {
 	document.getElementById("story").innerHTML += "<p>" + msg + "</p>";
 }
+
+//Various scenes
 function update_scene(s) {
 	switch(s) {
 		case "start":
