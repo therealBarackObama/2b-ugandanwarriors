@@ -5,13 +5,13 @@ var playername = "";
 function intro() {
 	confirm("By starting a new game, you will reaplce any old saves. Do you wish to proceed?");
 	playername = prompt("What is your name?");
-	update_scene("start");
+	update_scene("start","start");
 }
 function new_message(msg) {
 	document.getElementById("story").innerHTML += "<p>" + msg + "</p>";
 }
-function update_scene(s) {
-	switch(s) {
+function update_scene(s,c) {
+	switch(s,c) {
 		case "start":
 			new_message("What planet is this cargo going to again?");
 				setTimeout(function() {
@@ -80,40 +80,79 @@ function update_scene(s) {
 																																																																			new_message("NOOO! JONATHAN!!! - " + playername);
 																																																																				setTimeout(function() {
 																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
-																									
-					}, 3000);
-						}, 3000);
-							}, 3000);
-								}, 3000);
-									}, 3000);
-										}, 3000);
-											}, 3000);
-												}, 3000);
-													}, 3000);
-														}, 3000);
-															}, 3000);
-																}, 3000);
-																	}, 3000);
-																		}, 3000);
-																			}, 3000);
-																				}, 3000);
-																					}, 3000);
-																						}, 3000);
-																							}, 3000);
-																								}, 3000);
-																									}, 3000);
-																										}, 3000);	
-																											}, 3000);
-																												}, 3000);
-																													}, 3000);
-																														}, 3000);
-																															}, 3000);
-																																}, 3000);
-																																	}, 3000);
-																																		}, 3000);
-																																			}, 3000);
-																																				}, 3000);
-																																					}, 3000);
+																																																																						setTimeout(function() { 
+																																																																							new_button("continue","thecrash");
+																																																																							
+																																																																							new_button("No ur big gey","thegey");
+																																											
+																																																																					}, 100);
+					}, 100);
+						}, 100);
+							}, 100);
+								}, 100);
+									}, 100);
+										}, 100);
+											}, 100);
+												}, 100);
+													}, 100);
+														}, 100);
+															}, 100);
+																}, 100);
+																	}, 100);
+																		}, 100);
+																			}, 100);
+																				}, 100);
+																					}, 100);
+																						}, 100);
+																							}, 100);
+																								}, 100);
+																									}, 100);
+																										}, 100);	
+																											}, 100);
+																												}, 100);
+																													}, 100);
+																														}, 100);
+																															}, 100);
+																																}, 100);
+																																	}, 100);
+																																		}, 100);
+																																			}, 100);
+																																				}, 100);
+																																					}, 100);
 	break;
-	}
+	case "thecrash":
+			new_message("what happened..... - " + playername);
+				setTimeout(function() {
+					new_message("Jonathan, where are you?! - " + playername);
+						setTimeout(function() {
+							new_message(); 
+							setTimeout(function() {
+						}, 100);
+				}, 100);
+	}, 100);
+break;
+
+case "thegey":
+	new_message("this is a test pls restart page and choose contibnue");
+	setTimeout(function() {
+		new_button("ok fine", "thecrash");
+		setTimeout(function() {
+			new_button("wow ur cool this is easteregg", "easteregg");
+		
+	}, 100);
+	}, 1000);
+	break;
+	
+case "easteregg":
+	new_message(" if you're first to find this use this code its an amazon giftcard = 144f23 12354u2 dg45fg ");
+	new_button("Return", "thecrash");
+
+	} // end switch
+} // end update_scene()
+
+
+function new_button(s,c) {
+	document.getElementById("story").innerHTML += "<button onClick='update_scene("+c+")'>" + s + "</button>";
 }
+
+                  
