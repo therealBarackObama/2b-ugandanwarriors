@@ -1,17 +1,34 @@
 // JavaScript Document
 
 var playername = "";
+var stagename = ""
 
+//Begins the game
 function intro() {
 	confirm("By starting a new game, you will reaplce any old saves. Do you wish to proceed?");
 	playername = prompt("What is your name?");
+<<<<<<< HEAD
 	update_scene("start","start");
+=======
+	document.getElementById("stats_name").innerHTML = "Player name : " + playername;
+	stagename = "start";
+	update_scene(stagename);
+>>>>>>> b33997bf1d203a577802f789c32b178ca53ceb62
 }
+
+//Adds to textbox text
 function new_message(msg) {
 	document.getElementById("story").innerHTML += "<p>" + msg + "</p>";
 }
+<<<<<<< HEAD
 function update_scene(s,c) {
 	switch(s,c) {
+=======
+
+//Various scenes
+function update_scene(s) {
+	switch(s) {
+>>>>>>> b33997bf1d203a577802f789c32b178ca53ceb62
 		case "start":
 			new_message("What planet is this cargo going to again?");
 				setTimeout(function() {
