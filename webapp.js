@@ -141,7 +141,7 @@ function update_scene(s) {
 																																							}, 10);
 																																						}, 10);
 																																					}, 10);
-				}, 100);
+				}, 3000);
 			break;
 		case "TheCrash":
 			new_message("heading to the bakery them donuts getting glazed");
