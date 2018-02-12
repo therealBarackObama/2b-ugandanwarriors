@@ -16,6 +16,14 @@ function intro() {
 
 function scene2() {
 	alert("Scene2");	
+	stagename = "TheCrash";
+	update_scene(stagename);
+}
+
+function easterboi() {
+	alert("easter egggeg found");
+	stagename = "cooleastereggy";
+	update_scene(stagename);
 }
 
 //Adds to textbox text
@@ -96,6 +104,9 @@ function update_scene(s) {
 																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
 																																																																						setTimeout(function() {
 																																																																							document.getElementById("story").innerHTML += "<button onClick='scene2()'>Continue</button>";
+																																																																								setTimeout(function() {
+																																																																									document.getElementById("story").innerHTML += "<button onClick='easterboi()'>wow an easter egggg</button>";
+																																																																							
 																																																																						}, 10);
 																																																																					}, 10);
 																																																																				}, 10);
@@ -130,11 +141,15 @@ function update_scene(s) {
 																																							}, 10);
 																																						}, 10);
 																																					}, 10);
+				}, 100);
 			break;
 		case "TheCrash":
+			new_message("heading to the bakery them donuts getting glazed");
+			setTimeout(function() {
+			}, 10);
 			break;
-		case "TheGey":
-		
+		case "cooleastereggy":
+			new_message("amazon giftcard code = VEPL - R6NVYD - YAXLM yw bois");
 			break;
 			}
 		}
