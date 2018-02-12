@@ -136,5 +136,6 @@ function update_scene(s) {
 		case "TheGey":
 		
 			break;
-	}
-}
+			}
+		}
+                  
