@@ -7,9 +7,14 @@ var stagename = ""
 function intro() {
 	confirm("By starting a new game, you will reaplce any old saves. Do you wish to proceed?");
 	playername = prompt("What is your name?");
+	stagename = "Start";
 	document.getElementById("stats_name").innerHTML = "Player name : " + playername;
-	stagename = "start";
+	document.getElementById("stage_name").innerHTML = "Stage name : " + stagename;
 	update_scene(stagename);
+}
+
+function scene2() {
+	alert("Scene2");	
 }
 
 //Adds to textbox text
@@ -20,12 +25,12 @@ function new_message(msg) {
 //Various scenes
 function update_scene(s) {
 	switch(s) {
-		case "start":
+		case "Start":
 			new_message("What planet is this cargo going to again?");
 				setTimeout(function() {
 					new_message("Jonathan, we've been over this a hundred times!");
 						setTimeout(function() {
-							new_message("I know! I know! I just keep forgeting! - Jonathan"); 
+							new_message("I know! I know! I just keep forgetting! - Jonathan"); 
 								setTimeout(function() {
 									new_message("Planet Fostroth, now don't ask again! - " + playername);
 										setTimeout(function() {
@@ -88,40 +93,48 @@ function update_scene(s) {
 																																																																			new_message("NOOO! JONATHAN!!! - " + playername);
 																																																																				setTimeout(function() {
 																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
-																									
-					}, 3000);
-						}, 3000);
-							}, 3000);
-								}, 3000);
-									}, 3000);
-										}, 3000);
-											}, 3000);
-												}, 3000);
-													}, 3000);
-														}, 3000);
-															}, 3000);
-																}, 3000);
-																	}, 3000);
-																		}, 3000);
-																			}, 3000);
-																				}, 3000);
-																					}, 3000);
-																						}, 3000);
-																							}, 3000);
-																								}, 3000);
-																									}, 3000);
-																										}, 3000);	
-																											}, 3000);
-																												}, 3000);
-																													}, 3000);
-																														}, 3000);
-																															}, 3000);
-																																}, 3000);
-																																	}, 3000);
-																																		}, 3000);
-																																			}, 3000);
-																																				}, 3000);
-																																					}, 3000);
-	break;
+																																																																						setTimeout(function() {
+																																																																							document.getElementById("story").innerHTML += "<button onClick='scene2()'>Continue</button>";
+																																																																						}, 10);
+																																																																					}, 10);
+																																																																				}, 10);
+																																																																			}, 10);
+																																																																		}, 10);
+																																																																	}, 10);
+																																																																}, 10);
+																																																															}, 10);
+																																																														}, 10);
+																																																													}, 10);
+																																																												}, 10);
+																																																											}, 10);
+																																																										}, 10);
+																																																									}, 10);
+																																																								}, 10);
+																																																							}, 10);
+																																																						}, 10);
+																																																					}, 10);
+																																																				}, 10);
+																																																			}, 10);
+																																																		}, 10);
+																																																	}, 10);
+																																																}, 10);	
+																																															}, 10);
+																																														}, 10);
+																																													}, 10);
+																																												}, 10);
+																																											}, 10);
+																																										}, 10);
+																																									}, 10);
+																																								}, 10);
+																																							}, 10);
+																																						}, 10);
+																																					}, 10);
+			break;
+		case "TheCrash":
+			
+			break;
+		case "TheGey":
+		
+			break;
 	}
 }
