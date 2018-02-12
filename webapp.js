@@ -7,7 +7,8 @@ var stagename = ""
 function intro() {
 	confirm("By starting a new game, you will reaplce any old saves. Do you wish to proceed?");
 	playername = prompt("What is your name?");
-	document.getElementById("stats_name").innerHTML = "Player name : " + playername;
+	document.getElementById("stats_name").innerHTML = "Player Name : " + playername;
+	document.getElementById("stage_name").innerHTML = "Stage Name : " + stagename;
 	stagename = "start";
 	update_scene(stagename);
 }
@@ -88,40 +89,41 @@ function update_scene(s) {
 																																																																			new_message("NOOO! JONATHAN!!! - " + playername);
 																																																																				setTimeout(function() {
 																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
-																									
-					}, 3000);
-						}, 3000);
-							}, 3000);
-								}, 3000);
-									}, 3000);
-										}, 3000);
-											}, 3000);
-												}, 3000);
-													}, 3000);
-														}, 3000);
-															}, 3000);
-																}, 3000);
-																	}, 3000);
-																		}, 3000);
-																			}, 3000);
-																				}, 3000);
-																					}, 3000);
-																						}, 3000);
-																							}, 3000);
-																								}, 3000);
-																									}, 3000);
-																										}, 3000);	
-																											}, 3000);
-																												}, 3000);
-																													}, 3000);
-																														}, 3000);
-																															}, 3000);
-																																}, 3000);
-																																	}, 3000);
-																																		}, 3000);
-																																			}, 3000);
-																																				}, 3000);
-																																					}, 3000);
-	break;
+					}, 100);
+						}, 100);
+							}, 100);
+								}, 100);
+									}, 100);
+										}, 100);
+											}, 100);
+												}, 100);
+													}, 100);
+														}, 100);
+															}, 100);
+																}, 100);
+																	}, 100);
+																		}, 100);
+																			}, 100);
+																				}, 100);
+																					}, 100);
+																						}, 100);
+																							}, 100);
+																								}, 100);
+																									}, 100);
+																										}, 100);	
+																											}, 100);
+																												}, 100);
+																													}, 100);
+																														}, 100);
+																															}, 100);
+																																}, 100);
+																																	}, 100);
+																																		}, 100);
+																																			}, 100);
+																																				}, 100);
+																																					}, 100);
+		break;
 	}
+	
 }
+                  
