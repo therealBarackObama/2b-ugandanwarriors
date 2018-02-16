@@ -19,6 +19,15 @@ function scene1() {
 	stagename = "TheCrash";
 	update_scene(stagename);
 }
+function Forest() {	
+	alert("Forest");
+	stagename = "Forest";
+	update_scene(stagename);
+}
+function Caves() {	
+	stagename = "Caves";
+	update_scene(stagename);
+}
 
 function scene3() {
 	alert("Scene3");	
@@ -150,17 +159,51 @@ function update_scene(s) {
 				}, 10);
 			break;
 		case "TheCrash":
-			new_message("ah, what happened? - " playername);
+			new_message("Where am I?");
 			setTimeout(function() {
-			new_message("Jonathan!!? - " playername);
+			new_message(" Uganda X?");
 			setTimeout(function() {
-			new_message("Where'd he go? - " playername);
+			new_message("Where's the ship?");
 			setTimeout(function() {
-			new_message("Well I can't worry about it now. I have to find out where I am - " playername);
+			new_message("Hmm, doesn't seem repairable.");
 			setTimeout(function() {
-				
+			new_message("Maybe someone left some items around here that I can use.");
+			setTimeout(function() {
+			new_message("Search the forest or caves?");
+			setTimeout(function(){
+			document.getElementById("story").innerHTML += "<button onClick='Forest()'>Forest</button>";
+			document.getElementById("story").innerHTML += "<button onClick='Caves()'>Caves</button>";			
+			}, 10);
+			}, 10);
+			}, 10);
+			}, 10);
+			}, 10);
 			}, 10);
 			break;
+		case "Caves":
+			new_message(playername + " travels into the dark caves.");
+			setTimeout(function(){
+			new_message("AWW YEAH! HIDDEN TREASURE! - " + playername);
+			setTimeout(function(){
+			new_message("Do I take it or leave it? - " + playername);
+			setTimeout(function(){
+			document.getElementById("story").innerHTML += "<button onClick='TheCrash2'>Take the treasure</button";
+			document.getElementById("story").innerHTML += "<button onClick='TheCrash3'> Leave the treasure</button";
+			}, 10);
+			}, 10);
+			}, 10);
+			break;
+		case "Forest":
+			new_message(playername + " travels into to forest and stumbles upon an old cabin.");
+			setTimeout(function() {
+			new_message("Will you go inside or keep walking?");
+			setTimeout(function(){
+			document.getElementById("cabin").innerHTML += "<button onClick='TheCrash4'>Go inside</button>";
+			document.getElementById("skipcabin").innerHTML += "<button onClick='TheCrash5'>Keep walking</button>";
+			}, 10);
+			}, 10);
+			break;
+
 		case "TheTowers":
 			new_message("brayden failed his writing proficiency");
 			setTimeout(function() {
