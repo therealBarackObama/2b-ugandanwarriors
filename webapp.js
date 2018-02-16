@@ -14,15 +14,18 @@ function intro() {
 	update_scene(stagename);
 }
 
-function scene2() {
-	alert("Scene2");	
-	stagename = "TheCrash";
+function scene2() {	
+	stagename = "The Crash";
+	document.getElementById("story").style.backgroundImage = "url('images/s1page.jpg')";
+	document.getElementById("stage_name").innerHTML = "Stage name : " + stagename;
+	document.getElementById("story").style.color = "rgba(11, 246, 19,1.0)";
+	document.getElementById("story").style.borderColor = "rgba(255, 0, 0, 1.0)";
 	update_scene(stagename);
 }
 
 function easterboi() {
-	alert("easter egggeg found");
-	stagename = "cooleastereggy";
+	stagename = "Cool Easter Eggy";
+	alert("Easter Egg Found");
 	update_scene(stagename);
 }
 
@@ -104,9 +107,7 @@ function update_scene(s) {
 																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
 																																																																						setTimeout(function() {
 																																																																							document.getElementById("story").innerHTML += "<button onClick='scene2()'>Continue</button>";
-																																																																								setTimeout(function() {
-																																																																									document.getElementById("story").innerHTML += "<button onClick='easterboi()'>wow an easter egggg</button>";
-																																																																							
+																																																																							document.getElementById("story").innerHTML += "<button onClick='easterboi()'>wow an easter egggg</button>";
 																																																																						}, 10);
 																																																																					}, 10);
 																																																																				}, 10);
@@ -128,8 +129,8 @@ function update_scene(s) {
 																																																				}, 10);
 																																																			}, 10);
 																																																		}, 10);
-																																																	}, 10);
-																																																}, 10);	
+																																																	}, 10);	
+																																																}, 10);
 																																															}, 10);
 																																														}, 10);
 																																													}, 10);
@@ -141,15 +142,17 @@ function update_scene(s) {
 																																							}, 10);
 																																						}, 10);
 																																					}, 10);
-				}, 3000);
 			break;
-		case "TheCrash":
+		case "The Crash":
+			document.getElementById("story").innerHTML = " "
 			new_message("heading to the bakery them donuts getting glazed");
-			setTimeout(function() {
-			}, 10);
+				setTimeout(function() {
+				
+				}, 10);
 			break;
-		case "cooleastereggy":
+		case "Cool Easter Eggy":
 			new_message("amazon giftcard code = VEPL - R6NVYD - YAXLM yw bois");
+				
 			break;
 			}
 		}
