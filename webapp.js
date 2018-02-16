@@ -1,7 +1,7 @@
 // JavaScript Document
 
 var playername = "";
-var stagename = ""
+var stagename = "";
 
 //Begins the game
 function intro() {
@@ -144,8 +144,15 @@ function update_scene(s) {
 				}, 3000);
 			break;
 		case "TheCrash":
-			new_message("heading to the bakery them donuts getting glazed");
+			new_message("ah, what happened? - " playername);
 			setTimeout(function() {
+			new_message("Jonathan!!? - " playername);
+			setTimeout(function() {
+			new_message("Where'd he go? - " playername);
+			setTimeout(function() {
+			new_message("Well I can't worry about it now. I have to find out where I am - " playername);
+			setTimeout(function() {
+				
 			}, 10);
 			break;
 		case "cooleastereggy":
