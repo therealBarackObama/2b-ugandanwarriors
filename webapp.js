@@ -1,7 +1,7 @@
 // JavaScript Document
 
 var playername = "";
-var stagename = ""
+var stagename = "";
 
 //Begins the game
 function intro() {
@@ -14,12 +14,15 @@ function intro() {
 	update_scene(stagename);
 }
 
-function scene2() {	
+function scene1() {	
 	stagename = "The Crash";
 	document.getElementById("story").style.backgroundImage = "url('images/s1page.jpg')";
 	document.getElementById("stage_name").innerHTML = "Stage name : " + stagename;
 	document.getElementById("story").style.color = "rgba(11, 246, 19,1.0)";
 	document.getElementById("story").style.borderColor = "rgba(255, 0, 0, 1.0)";
+
+function scene3() {	
+	stagename = "The Towers";
 	update_scene(stagename);
 }
 
@@ -106,7 +109,7 @@ function update_scene(s) {
 																																																																				setTimeout(function() {
 																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
 																																																																						setTimeout(function() {
-																																																																							document.getElementById("story").innerHTML += "<button onClick='scene2()'>Continue</button>";
+																																																																							document.getElementById("story").innerHTML += "<button onClick='scene1()'>Continue</button>";
 																																																																							document.getElementById("story").innerHTML += "<button onClick='easterboi()'>wow an easter egggg</button>";
 																																																																						}, 10);
 																																																																					}, 10);
@@ -142,17 +145,29 @@ function update_scene(s) {
 																																							}, 10);
 																																						}, 10);
 																																					}, 10);
-			break;
+			break;	
 		case "The Crash":
-			document.getElementById("story").innerHTML = " "
-			new_message("heading to the bakery them donuts getting glazed");
+			new_message("ah, what happened? - " + playername);
 				setTimeout(function() {
+					new_message("Jonathan!!? - " + playername);
+						setTimeout(function() {
+							new_message("Where'd he go? - " + playername);
+								setTimeout(function() {
+									new_message("Well I can't worry about it now. I have to find out where I am - " + playername);
+										setTimeout(function() {
 				
+										}, 10);
+									}, 10);
+								}, 10);
+							}, 10);
+			break;
+		case "The Towers":
+			new_message("brayden failed his writing proficiency");
+				setTimeout(function() {
 				}, 10);
 			break;
 		case "Cool Easter Eggy":
 			new_message("amazon giftcard code = VEPL - R6NVYD - YAXLM yw bois");
-				
 			break;
 			}
 		}
