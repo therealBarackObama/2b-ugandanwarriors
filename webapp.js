@@ -14,6 +14,7 @@ function intro() {
 	update_scene(stagename);
 }
 
+<<<<<<< HEAD
 function scene1() {
 	alert("Scene1");	
 	stagename = "TheCrash";
@@ -28,16 +29,23 @@ function Caves() {
 	stagename = "Caves";
 	update_scene(stagename);
 }
+=======
+function scene1() {	
+	stagename = "The Crash";
+	document.getElementById("story").style.backgroundImage = "url('images/s1page.jpg')";
+	document.getElementById("stage_name").innerHTML = "Stage name : " + stagename;
+	document.getElementById("story").style.color = "rgba(11, 246, 19,1.0)";
+	document.getElementById("story").style.borderColor = "rgba(255, 0, 0, 1.0)";
+>>>>>>> 8e050a0733a83a9cee1d6b0bb888f6fe90994197
 
-function scene3() {
-	alert("Scene3");	
-	stagename = "TheTowers";
+function scene3() {	
+	stagename = "The Towers";
 	update_scene(stagename);
 }
 
 function easterboi() {
-	alert("easter egggeg found");
-	stagename = "cooleastereggy";
+	stagename = "Cool Easter Eggy";
+	alert("Easter Egg Found");
 	update_scene(stagename);
 }
 
@@ -119,10 +127,8 @@ function update_scene(s) {
 																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
 																																																																						setTimeout(function() {
 																																																																							document.getElementById("story").innerHTML += "<button onClick='scene1()'>Continue</button>";
-																																																																								setTimeout(function() {
-																																																																									document.getElementById("story").innerHTML += "<button onClick='easterboi()'>wow an easter egggg</button>";
-																																																																							
-																																																																						}, 30000);
+																																																																							document.getElementById("story").innerHTML += "<button onClick='easterboi()'>wow an easter egggg</button>";
+																																																																						}, 10);
 																																																																					}, 10);
 																																																																				}, 10);
 																																																																			}, 10);
@@ -143,8 +149,8 @@ function update_scene(s) {
 																																																				}, 10);
 																																																			}, 10);
 																																																		}, 10);
-																																																	}, 10);
-																																																}, 10);	
+																																																	}, 10);	
+																																																}, 10);
 																																															}, 10);
 																																														}, 10);
 																																													}, 10);
@@ -156,6 +162,7 @@ function update_scene(s) {
 																																							}, 10);
 																																						}, 10);
 																																					}, 10);
+<<<<<<< HEAD
 				}, 10);
 			break;
 		case "TheCrash":
@@ -205,11 +212,30 @@ function update_scene(s) {
 			break;
 
 		case "TheTowers":
-			new_message("brayden failed his writing proficiency");
-			setTimeout(function() {
-			}, 10);
+=======
+			break;	
+		case "The Crash":
+			new_message("ah, what happened? - " + playername);
+				setTimeout(function() {
+					new_message("Jonathan!!? - " + playername);
+						setTimeout(function() {
+							new_message("Where'd he go? - " + playername);
+								setTimeout(function() {
+									new_message("Well I can't worry about it now. I have to find out where I am - " + playername);
+										setTimeout(function() {
+				
+										}, 10);
+									}, 10);
+								}, 10);
+							}, 10);
 			break;
-		case "cooleastereggy":
+		case "The Towers":
+>>>>>>> 8e050a0733a83a9cee1d6b0bb888f6fe90994197
+			new_message("brayden failed his writing proficiency");
+				setTimeout(function() {
+				}, 10);
+			break;
+		case "Cool Easter Eggy":
 			new_message("amazon giftcard code = VEPL - R6NVYD - YAXLM yw bois");
 			break;
 			}
