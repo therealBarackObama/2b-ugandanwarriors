@@ -106,7 +106,7 @@ function update_scene(s) {
 																																																																								setTimeout(function() {
 																																																																									document.getElementById("story").innerHTML += "<button onClick='easterboi()'>wow an easter egggg</button>";
 																																																																							
-																																																																						}, 10);
+																																																																						}, 30000);
 																																																																					}, 10);
 																																																																				}, 10);
 																																																																			}, 10);
@@ -140,14 +140,14 @@ function update_scene(s) {
 																																							}, 10);
 																																						}, 10);
 																																					}, 10);
-				}, 3000);
+				}, 10);
 			break;
 		case "TheCrash":
 			new_message("heading to the bakery them donuts getting glazed");
 			setTimeout(function() {
 			}, 10);
 			break;
-		case "easterboi":
+		case "cooleastereggy":
 			new_message("amazon giftcard code = VEPL - R6NVYD - YAXLM yw bois");
 			break;
 			}
