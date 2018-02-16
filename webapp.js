@@ -2,8 +2,11 @@
 
 var playername = "";
 var stagename = "";
-
-//Begins the game
+//Adds to textbox text
+function new_message(msg) {
+	document.getElementById("story").innerHTML += "<p>" + msg + "</p>";
+}
+//Introduction
 function intro() {
 	confirm("By starting a new game, you will reaplce any old saves. Do you wish to proceed?");
 	playername = prompt("What is your name?");
@@ -13,47 +16,32 @@ function intro() {
 	document.getElementById("stage_name").innerHTML = "Stage name : " + stagename;
 	update_scene(stagename);
 }
-
-<<<<<<< HEAD
-function scene1() {
-	alert("Scene1");	
-	stagename = "TheCrash";
-	update_scene(stagename);
-}
-function Forest() {	
-	alert("Forest");
-	stagename = "Forest";
-	update_scene(stagename);
-}
-function Caves() {	
-	stagename = "Caves";
-	update_scene(stagename);
-}
-=======
+//The Crash
 function scene1() {	
 	stagename = "The Crash";
+	document.getElementById("story").innerHTML = "";
 	document.getElementById("story").style.backgroundImage = "url('images/s1page.jpg')";
 	document.getElementById("stage_name").innerHTML = "Stage name : " + stagename;
 	document.getElementById("story").style.color = "rgba(11, 246, 19,1.0)";
 	document.getElementById("story").style.borderColor = "rgba(255, 0, 0, 1.0)";
->>>>>>> 8e050a0733a83a9cee1d6b0bb888f6fe90994197
-
+	update_scene(stagename);
+}
+	//Forest
+	function Forest() {	
+		alert("Forest");
+		stagename = "Forest";
+		update_scene(stagename);
+	}
+	//Caves
+	function Caves() {	
+		stagename = "Caves";
+		update_scene(stagename);
+	}
+//The Towers
 function scene3() {	
 	stagename = "The Towers";
 	update_scene(stagename);
 }
-
-function easterboi() {
-	stagename = "Cool Easter Eggy";
-	alert("Easter Egg Found");
-	update_scene(stagename);
-}
-
-//Adds to textbox text
-function new_message(msg) {
-	document.getElementById("story").innerHTML += "<p>" + msg + "</p>";
-}
-
 //Various scenes
 function update_scene(s) {
 	switch(s) {
@@ -127,7 +115,6 @@ function update_scene(s) {
 																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
 																																																																						setTimeout(function() {
 																																																																							document.getElementById("story").innerHTML += "<button onClick='scene1()'>Continue</button>";
-																																																																							document.getElementById("story").innerHTML += "<button onClick='easterboi()'>wow an easter egggg</button>";
 																																																																						}, 10);
 																																																																					}, 10);
 																																																																				}, 10);
@@ -162,81 +149,53 @@ function update_scene(s) {
 																																							}, 10);
 																																						}, 10);
 																																					}, 10);
-<<<<<<< HEAD
-				}, 10);
 			break;
-		case "TheCrash":
+		case "The Crash":
 			new_message("Where am I?");
-			setTimeout(function() {
-			new_message(" Uganda X?");
-			setTimeout(function() {
-			new_message("Where's the ship?");
-			setTimeout(function() {
-			new_message("Hmm, doesn't seem repairable.");
-			setTimeout(function() {
-			new_message("Maybe someone left some items around here that I can use.");
-			setTimeout(function() {
-			new_message("Search the forest or caves?");
-			setTimeout(function(){
-			document.getElementById("story").innerHTML += "<button onClick='Forest()'>Forest</button>";
-			document.getElementById("story").innerHTML += "<button onClick='Caves()'>Caves</button>";			
-			}, 10);
-			}, 10);
-			}, 10);
-			}, 10);
-			}, 10);
-			}, 10);
+				setTimeout(function() {
+					new_message("...Uganda X?");
+						setTimeout(function() {
+							new_message("Ahh...Where's the ship?");
+								setTimeout(function() {
+									new_message("Hmm, doesn't seem repairable.");
+										setTimeout(function() {
+											new_message("Maybe someone left some items around here that I can use.");
+												setTimeout(function() {
+													new_message("Search the forest or caves?");
+														setTimeout(function(){
+															document.getElementById("story").innerHTML += "<button onClick='Forest()'>Forest</button>";
+															document.getElementById("story").innerHTML += "<button onClick='Caves()'>Caves</button>";			
+														}, 10);
+													}, 10);
+												}, 10);
+											}, 10);
+										}, 10);
+									}, 10);
 			break;
 		case "Caves":
 			new_message(playername + " travels into the dark caves.");
-			setTimeout(function(){
-			new_message("AWW YEAH! HIDDEN TREASURE! - " + playername);
-			setTimeout(function(){
-			new_message("Do I take it or leave it? - " + playername);
-			setTimeout(function(){
-			document.getElementById("story").innerHTML += "<button onClick='TheCrash2'>Take the treasure</button";
-			document.getElementById("story").innerHTML += "<button onClick='TheCrash3'> Leave the treasure</button";
-			}, 10);
-			}, 10);
-			}, 10);
+				setTimeout(function(){
+					new_message("AWW YEAH! HIDDEN TREASURE! - " + playername);
+						setTimeout(function(){
+							new_message("Do I take it or leave it? - " + playername);
+								setTimeout(function(){
+									document.getElementById("story").innerHTML += "<button onClick='TheCrash2'>Take the treasure</button";
+									document.getElementById("story").innerHTML += "<button onClick='TheCrash3'> Leave the treasure</button";
+								}, 10);
+							}, 10);
+						}, 10);
 			break;
 		case "Forest":
 			new_message(playername + " travels into to forest and stumbles upon an old cabin.");
-			setTimeout(function() {
-			new_message("Will you go inside or keep walking?");
-			setTimeout(function(){
-			document.getElementById("cabin").innerHTML += "<button onClick='TheCrash4'>Go inside</button>";
-			document.getElementById("skipcabin").innerHTML += "<button onClick='TheCrash5'>Keep walking</button>";
-			}, 10);
-			}, 10);
-			break;
-
-		case "TheTowers":
-=======
-			break;	
-		case "The Crash":
-			new_message("ah, what happened? - " + playername);
 				setTimeout(function() {
-					new_message("Jonathan!!? - " + playername);
-						setTimeout(function() {
-							new_message("Where'd he go? - " + playername);
-								setTimeout(function() {
-									new_message("Well I can't worry about it now. I have to find out where I am - " + playername);
-										setTimeout(function() {
-				
-										}, 10);
-									}, 10);
-								}, 10);
-							}, 10);
+					new_message("Will you go inside or keep walking?");
+						setTimeout(function(){
+							document.getElementById("cabin").innerHTML += "<button onClick='TheCrash4'>Go inside</button>";
+							document.getElementById("skipcabin").innerHTML += "<button onClick='TheCrash5'>Keep walking</button>";
+						}, 10);
+					}, 10);
 			break;
 		case "The Towers":
->>>>>>> 8e050a0733a83a9cee1d6b0bb888f6fe90994197
-			new_message("brayden failed his writing proficiency");
-				setTimeout(function() {
-				}, 10);
-			break;
-		case "Cool Easter Eggy":
-			new_message("amazon giftcard code = VEPL - R6NVYD - YAXLM yw bois");
 			break;
 			}
 		}
