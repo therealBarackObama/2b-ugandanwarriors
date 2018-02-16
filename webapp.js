@@ -8,6 +8,7 @@ function intro() {
 	confirm("By starting a new game, you will reaplce any old saves. Do you wish to proceed?");
 	playername = prompt("What is your name?");
 	stagename = "Start";
+	document.getElementById("story").innerHTML = "";
 	document.getElementById("stats_name").innerHTML = "Player name : " + playername;
 	document.getElementById("stage_name").innerHTML = "Stage name : " + stagename;
 	update_scene(stagename);
