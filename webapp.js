@@ -1,7 +1,7 @@
 // JavaScript Document
 
 var playername = "";
-var stagename = ""
+var stagename = "";
 
 //Begins the game
 function intro() {
@@ -14,9 +14,15 @@ function intro() {
 	update_scene(stagename);
 }
 
-function scene2() {
-	alert("Scene2");	
+function scene1() {
+	alert("Scene1");	
 	stagename = "TheCrash";
+	update_scene(stagename);
+}
+
+function scene3() {
+	alert("Scene3");	
+	stagename = "TheTowers";
 	update_scene(stagename);
 }
 
@@ -103,7 +109,7 @@ function update_scene(s) {
 																																																																				setTimeout(function() {
 																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
 																																																																						setTimeout(function() {
-																																																																							document.getElementById("story").innerHTML += "<button onClick='scene2()'>Continue</button>";
+																																																																							document.getElementById("story").innerHTML += "<button onClick='scene1()'>Continue</button>";
 																																																																								setTimeout(function() {
 																																																																									document.getElementById("story").innerHTML += "<button onClick='easterboi()'>wow an easter egggg</button>";
 																																																																							
@@ -145,6 +151,11 @@ function update_scene(s) {
 			break;
 		case "TheCrash":
 			new_message("heading to the bakery them donuts getting glazed");
+			setTimeout(function() {
+			}, 10);
+			break;
+		case "TheTowers":
+			new_message("brayden failed his writing proficiency");
 			setTimeout(function() {
 			}, 10);
 			break;
