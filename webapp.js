@@ -17,7 +17,7 @@ function intro() {
 	update_scene(stagename);
 }
 //The Crash
-function scene1() {	
+function thecrash() {	
 	stagename = "The Crash";
 	document.getElementById("story").innerHTML = "";
 	document.getElementById("story").style.backgroundImage = "url('images/s1page.jpg')";
@@ -27,18 +27,21 @@ function scene1() {
 	update_scene(stagename);
 }
 	//Forest
-	function Forest() {	
-		alert("Forest");
+	function forest() {	
 		stagename = "Forest";
 		update_scene(stagename);
 	}
+		//Cabin
+		function cabin() {	
+			alert("cabin")
+		}
 	//Caves
-	function Caves() {	
+	function caves() {	
 		stagename = "Caves";
 		update_scene(stagename);
 	}
 //The Towers
-function scene3() {	
+function thetowers() {	
 	stagename = "The Towers";
 	update_scene(stagename);
 }
@@ -114,7 +117,7 @@ function update_scene(s) {
 																																																																				setTimeout(function() {
 																																																																					new_message("The ships tilts downwards. All controll has been lost, the ship spirals downwards towards the mysterious plantet of Uganda X.");
 																																																																						setTimeout(function() {
-																																																																							document.getElementById("story").innerHTML += "<button onClick='scene1()'>Continue</button>";
+																																																																							document.getElementById("story").innerHTML += "<center><button onClick='thecrash()'>Continue</button></center>";
 																																																																						}, 10);
 																																																																					}, 10);
 																																																																				}, 10);
@@ -163,8 +166,8 @@ function update_scene(s) {
 												setTimeout(function() {
 													new_message("Search the forest or caves?");
 														setTimeout(function(){
-															document.getElementById("story").innerHTML += "<button onClick='Forest()'>Forest</button>";
-															document.getElementById("story").innerHTML += "<button onClick='Caves()'>Caves</button>";			
+															document.getElementById("story").innerHTML += "<button onClick='forest()'>Forest</button>";
+															document.getElementById("story").innerHTML += "<button onClick='caves()'>Caves</button>";			
 														}, 10);
 													}, 10);
 												}, 10);
@@ -190,8 +193,8 @@ function update_scene(s) {
 				setTimeout(function() {
 					new_message("Will you go inside or keep walking?");
 						setTimeout(function(){
-							document.getElementById("cabin").innerHTML += "<button onClick='TheCrash4'>Go inside</button>";
-							document.getElementById("skipcabin").innerHTML += "<button onClick='TheCrash5'>Keep walking</button>";
+							document.getElementById("story").innerHTML += "<button onClick='cabin'>Go inside</button>";
+							document.getElementById("story").innerHTML += "<button onClick='TheCrash5'>Keep walking</button>";
 						}, 10);
 					}, 10);
 			break;
