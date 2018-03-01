@@ -32,6 +32,44 @@ function thecrash() {
 			document.getElementById("forest").disabled = true;
 			stagename = "Forest";
 			update_scene(stagename);
+		}
+	//RightRiddles
+	function RightRiddle1() {
+		stagename = "RightRiddle1";
+		update_scene(stagename);
+	}
+	function RightRiddle2() {
+		stagename = "RightRiddle2";
+		update_scene(stagename);
+	}
+	//WrongRiddles
+	function WrongRiddle1() {
+		stagename = "WrongRiddle1";
+		update_scene(stagename);
+	}
+	function WrongRiddle2() {
+		stagename = "WrongRiddle2";
+		update_scene(stagename);
+	}
+	//Caves
+	function caves() {	
+			}
+			//Cabin
+			function cabin() {	
+				document.getElementById("cabin").style.backgroundColor = "rgba(256, 0, 0, 1.0)";
+				document.getElementById("cabin").style.borderColor = "rgba(255, 0, 0, 1.0)";
+				document.getElementById("cabin").disabled = true;
+				stagename = "cabin";
+				update_scene(stagename);
+			}
+		//Caves
+		function caves() {	
+		document.getElementById("caves").style.backgroundColor = "rgba(256, 0, 0, 1.0)";
+		document.getElementById("caves").style.borderColor = "rgba(255, 0, 0, 1.0)";
+		document.getElementById("caves").disabled = true;
+		stagename = "Caves";
+		update_scene(stagename);
+	}
 			}
 			//Cabin
 			function cabin() {	
@@ -74,9 +112,34 @@ function thecrash() {
 			update_scene(stagename);
 			}
 //The Towers
-function thetowers() {	
-	stagename = "The Towers";
-	update_scene(stagename);
+function thetowers() {
+stagename = "TheTowers";
+update_scene(stagename);
+}
+//runout
+function runout() {
+stagename = "runout";
+update_scene(stagename);
+}
+//Continue
+function goinside() {
+stagename = "goinside";
+update_scene(stagename);
+}
+//Finding back way
+function backway() {
+stagename = "backway";
+update_scene(stagename);
+}
+//Going deeper
+function godeeper() {
+stagename = "godeeper";
+update_scene(stagename);
+}
+//seeing door
+function seesdoor() {
+stagename = "seesdoor";
+update_scene(stagename);
 }
 //Various scenes
 function update_scene(s) {
@@ -122,7 +185,7 @@ function update_scene(s) {
 																																								setTimeout(function() {
 																																									new_message("No way! - " + playername + " through intercom");
 																																										setTimeout(function() {
-																																											new_message("*BEEP* *BEEP* *BEEP* - computer in controll room");
+																																											new_message("*BEEP* *BEEP* *BEEP* - computer in control room");
 																																												setTimeout(function() {
 																																													new_message("Crap! - " + playername + " through intercom");
 																																														setTimeout(function() {
@@ -224,6 +287,14 @@ function update_scene(s) {
 		case "Treasure":
 			new_message("You take the treasure...");
 				setTimeout(function(){
+			new_message("A trap triggers a riddle for you to solve");
+				setTimeout(function() {
+			new_message("Imagine you are in a dark room. How do you get out?");
+				setTimeout(function() {
+					document.getElementById("story").innerHTML += "<button onClick='RightRiddle1()'>Stop imagining</button";
+					document.getElementById("story").innerHTML += "<button onClick='WrongRiddle1()'>Keep running until you find a way out</button";
+							}, 10);
+							}, 10);
 					new_message("A trap triggers a riddle for you to solve");
 						setTimeout(function() {
 							new_message("Imagine you are in a dark room. How do you get out?");
@@ -234,6 +305,32 @@ function update_scene(s) {
 							}, 10);
 						}, 10);
 			break;			
+		
+		
+		case "RightRiddle1":
+			new_message("Congradulations, you got the riddle right");
+				setTimeout(function(){
+			new_message("You may now open the chest");
+				setTimeout(function(){
+			new_message("You open the chest and find...");
+				setTimeout(function(){
+			new_message("A G36!");
+				setTimeout(function(){
+			new_message("You journey further into the caves just to find a dead end. So you turn around and leave the caves");
+				setTimeout(function(){
+			new_message("You may chose to explore the forest or continue");
+				setTimeout(function(){
+					document.getElementById("story").innerHTML += "<button onClick='forest()'>Go to the forest</button>";
+					document.getElementById("story").innerHTML += "<button onClick='Scene2()'>Continue</button>";
+						}, 10);
+						}, 10);
+						}, 10);
+						}, 10);
+						}, 10);
+						}, 10);
+break;			
+
+					
 		case "Forest":
 			new_message(playername + " travels into to forest and stumbles upon an old cabin.");
 				setTimeout(function() {
@@ -271,8 +368,67 @@ function update_scene(s) {
 								}, 10);
 							}, 10);
 		break;
+		case "RightRiddle2":
+		new_message("You are worthy of my armor");
+			setTimeout(function(){
+		new_message("Take it and do good");
+			setTimeout(function(){
+		new_message("You put the armor on and leave the cabin");
+			setTimeout(function(){
+		new_message("You keep looking and see towers in the distance with ships");
+			setTimeout(function(){
+		document.getElementById("story").innerHTML += "<button onClick='GoTowers()'>Go to the towers</button>";
+			}, 10);
+			}, 10);
+			}, 10);
+			}, 10);
+	break;
 		case "The Towers":
-			break;
+new_message("Ooh heck an alarm is sounding");
+setTimeout(function() {
+new_message("what do i do");
+setTimeout(function() {
+document.getElementById("story").innerHTML += "<button onClick='runout()'>I guess i will run out</button>";
+document.getElementById("story").innerHTML += "<button onClick='goinside()'>Ok well lets yolo and run in</button>";
+}, 10);
+}, 10);
+break;
+case "runout":
+new_message("testing run out");
+setTimeout(function() {
+document.getElementById("story").innerHTML += "<button onClick='goinside()'>Ok imma b dumb and run inside again</button>";
+document.getElementById("story").innerHTML += "<button onClick='backway()'>ok lets take the smart move and try to find a back way</button>";
+}, 10);
+break;
+
+case "goinside":
+new_message("ok lets run inisde and die");
+setTimeout(function() {
+new_message("this is very dumb");
+setTimeout(function() {
+new_message("ok im inside where do i go");
+setTimeout(function() {
+document.getElementById("story").innerHTML += "<button onClick='godeeper()'>lets continue but lets be careful</button>";
+document.getElementById("story").innerHTML += "<button onClick='runout()'>i regret this imma run outside, i cant do it</button>";
+}, 10);
+}, 10);
+}, 10);
+break;
+
+case "backway":
+new_message("testing backway");
+setTimeout(function() {
+document.getElementById("story").innerHTML += "<button onClick='seesdoor()'>ooh a door</button>";
+document.getElementById("story").innerHTML += "<button onClick='runout()'>oOh scary door</button>";
+}, 10);
+break;
+
+case "godeeper":
+new_message("ok lets venture deeper");
+setTimeout(function() {
+}, 10);
+break;
+
 			}
 		}
                   
