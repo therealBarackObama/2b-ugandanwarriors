@@ -17,9 +17,9 @@
 	background-image: url("images/startpage.jpg");
 	background-size: cover;
 	border-radius: 10px;
-	border: inset;
+	border: ridge;
 	border-color: rgba(90,148,58,1.00);
-	border-width: 5px;
+	border-width: 7px;
 	position: fixed;
 	margin-left: 6%;
 	margin-right: 20%;
@@ -33,7 +33,7 @@
 .textbox p {
 	margin: 5px;
 	text-align:left;
-	border:double;
+	border: ridge;
 	border-width:1px;
 	border-radius:5px;
 	border-color:rgba(0,182,36,1.00);
