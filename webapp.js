@@ -12,7 +12,6 @@ function intro() {
 	playername = prompt("What is your name?");
 	stagename = "Start";
 	document.getElementById("story").innerHTML = "";
-	document.getElementById("stats_name").innerHTML = "Player name : " + playername;
 	document.getElementById("stage_name").innerHTML = "Stage name : " + stagename;
 	update_scene(stagename);
 }
@@ -22,40 +21,58 @@ function thecrash() {
 	document.getElementById("story").innerHTML = "";
 	document.getElementById("story").style.backgroundImage = "url('images/s1page.jpg')";
 	document.getElementById("stage_name").innerHTML = "Stage name : " + stagename;
-	document.getElementById("story").style.color = "rgba(11, 246, 19,1.0)";
+	document.getElementById("story").style.color = "rgba(256, 256, 256,1.0)";
 	document.getElementById("story").style.borderColor = "rgba(255, 0, 0, 1.0)";
 	update_scene(stagename);
 }
-	//Forest
-	function forest() {	
-		stagename = "Forest";
-		update_scene(stagename);
-	}
-		//Cabin
-		function cabin() {	
-			stagename = "cabin";
+		//Forest
+		function forest() {	
+			document.getElementById("forest").style.backgroundColor = "rgba(256, 0, 0, 1.0)";
+			document.getElementById("forest").style.borderColor = "rgba(255, 0, 0, 1.0)";
+			document.getElementById("forest").disabled = true;
+			stagename = "Forest";
 			update_scene(stagename);
-		}
-	//Caves
-	function caves() {	
+			}
+			//Cabin
+			function cabin() {	
+				document.getElementById("cabin").style.backgroundColor = "rgba(256, 0, 0, 1.0)";
+				document.getElementById("cabin").style.borderColor = "rgba(255, 0, 0, 1.0)";
+				document.getElementById("cabin").disabled = true;
+				stagename = "cabin";
+				update_scene(stagename);
+			}
+		//Caves
+		function caves() {	
+		document.getElementById("caves").style.backgroundColor = "rgba(256, 0, 0, 1.0)";
+		document.getElementById("caves").style.borderColor = "rgba(255, 0, 0, 1.0)";
+		document.getElementById("caves").disabled = true;
 		stagename = "Caves";
 		update_scene(stagename);
 	}
-	//Take the treasure
-	function Treasure() {
-		stagename = "Treasure";
-		update_scene(stagename);
-	}
-	//Leave the treasure
-	function LeaveTreasure() {
-		stagename = "LeaveTreasure";
-		update_scene(stagename);
-	}
-	//TakeArmor
-	function TakeArmor() {
-		stagename = "Armor";
-		update_scene(stagename);
-	}
+			//Take the treasure
+			function treasure() {
+				document.getElementById("treasure").style.backgroundColor = "rgba(256, 0, 0, 1.0)";
+				document.getElementById("treasure").style.borderColor = "rgba(255, 0, 0, 1.0)";
+				document.getElementById("treasure").disabled = true;
+				stagename = "Treasure";
+				update_scene(stagename);
+			}
+			//Leave the treasure
+			function leavetreasure() {
+				document.getElementById("leavetreasure").style.backgroundColor = "rgba(256, 0, 0, 1.0)";
+				document.getElementById("leavetreasure").style.borderColor = "rgba(255, 0, 0, 1.0)";
+				document.getElementById("leavetreasure").disabled = true;	
+				stagename = "LeaveTreasure";
+				update_scene(stagename);
+			}
+			//TakeArmor
+			function takearmor() {
+			document.getElementById("armor").style.backgroundColor = "rgba(256, 0, 0, 1.0)";
+			document.getElementById("armor").style.borderColor = "rgba(255, 0, 0, 1.0)";
+			document.getElementById("armor").disabled = true;
+			stagename = "Armor";
+			update_scene(stagename);
+			}
 //The Towers
 function thetowers() {	
 	stagename = "The Towers";
@@ -182,8 +199,8 @@ function update_scene(s) {
 												setTimeout(function() {
 													new_message("Search the forest or caves?");
 														setTimeout(function(){
-															document.getElementById("story").innerHTML += "<button onClick='forest()'>Forest</button>";
-															document.getElementById("story").innerHTML += "<button onClick='caves()'>Caves</button>";			
+															document.getElementById("story").innerHTML += "<button onClick='forest()' id='forest'>Forest</button>";
+															document.getElementById("story").innerHTML += "<button onClick='caves()' id='caves'>Caves</button>";			
 														}, 10);
 													}, 10);
 												}, 10);
@@ -198,8 +215,8 @@ function update_scene(s) {
 						setTimeout(function(){
 							new_message("Do I take it or leave it? - " + playername);
 								setTimeout(function(){
-									document.getElementById("story").innerHTML += "<button onClick='Treasure()'>Take the treasure</button";
-									document.getElementById("story").innerHTML += "<button onClick='LeaveTreasure()'> Leave the treasure</button";
+									document.getElementById("story").innerHTML += "<button onClick='treasure()' id='treasure'>Take the treasure</button";
+									document.getElementById("story").innerHTML += "<button onClick='leavetreasure()' id='leavetreasure'> Leave the treasure</button";
 								}, 10);
 							}, 10);
 						}, 10);
@@ -207,58 +224,53 @@ function update_scene(s) {
 		case "Treasure":
 			new_message("You take the treasure...");
 				setTimeout(function(){
-			new_message("A trap triggers a riddle for you to solve");
-				setTimeout(function() {
-			new_message("Imagine you are in a dark room. How do you get out?");
-				setTimeout(function() {
-					document.getElementById("story").innerHTML += "<button onClick='RightRiddle3()'>Stop imagining</button";
-					document.getElementById("story").innerHTML += "<button onClick='WrongRiddle3()'>Keep running until you find a way out</button";
+					new_message("A trap triggers a riddle for you to solve");
+						setTimeout(function() {
+							new_message("Imagine you are in a dark room. How do you get out?");
+								setTimeout(function() {
+									document.getElementById("story").innerHTML += "<button onClick='rightriddle3()'>Stop imagining</button";
+									document.getElementById("story").innerHTML += "<button onClick='wrongriddle3()'>Keep running until you find a way out</button";
+								}, 10);
 							}, 10);
-							}, 10);
-							}, 10);
+						}, 10);
 			break;			
 		case "Forest":
 			new_message(playername + " travels into to forest and stumbles upon an old cabin.");
 				setTimeout(function() {
 					new_message("Will you go inside or keep walking?");
 						setTimeout(function(){
-							document.getElementById("story").innerHTML += "<button onClick='cabin()'>Go inside</button>";
-							document.getElementById("story").innerHTML += "<button onClick='TowersDistance()'>Keep walking</button>";
+							document.getElementById("story").innerHTML += "<button onClick='cabin()' id='cabin'>Go inside</button>";
+							document.getElementById("story").innerHTML += "<button onClick='towersdistance()' id='towersdistance'>Keep walking</button>";
 						}, 10);
 					}, 10);
 			break;
 			
 		case "cabin":
-		new_message("You walk into the cabin and find a skeleton with armor");
-			setTimeout(function() {
-		new_message("Will you take the armor or leave it?");
-			setTimeout(function() {
-				document.getElementById("story").innerHTML += "<button onClick='TakeArmor()'>Take the armor</button>";
-				document.getElementById("story").innerHTML += "<button onClick='LeaveArmor()'>Leave the armor</button>";
-			}, 10);
-			}, 10);
+			new_message("You walk into the cabin and find a skeleton with armor");
+				setTimeout(function() {
+					new_message("Will you take the armor or leave it?");
+						setTimeout(function() {
+							document.getElementById("story").innerHTML += "<button onClick='takearmor()' id='takearmor'>Take the armor</button>";
+							document.getElementById("story").innerHTML += "<button onClick='leavearmor()' id='leavearmor'>Leave the armor</button>";
+						}, 10);
+					}, 10);
 		break;
-		
 		case "Armor":
-		new_message("The skeleton awakens...");
-			setTimeout(function() {
-		new_message("I see you want to take my armor");
-			setTimeout(function() {
-		new_message("If you must take my armor then you have to solve this puzzle");
-			setTimeout(function() {
-		new_message("A cowboy rode into town on Friday. He stayed in town for three days and rode out on Friday. How was that possible?");
-			setTimeout(function() {
-				document.getElementById("story").innerHTML += "<button onClick='RightRiddle2()'>The horse's name is Friday</button>";
-				document.getElementById("story").innerHTML += "<button onClick='WrongRiddle2()'>He used a time machine</button>";
-			}, 10);
-			}, 10);
-			}, 10);
-			}, 10);
+			new_message("The skeleton awakens...");
+				setTimeout(function() {
+					new_message("I see you want to take my armor");
+						setTimeout(function() {
+							new_message("If you must take my armor then you have to solve this puzzle");
+								setTimeout(function() {
+									new_message("A cowboy rode into town on Friday. He stayed in town for three days and rode out on Friday. How was that possible?");
+										setTimeout(function() {
+											document.getElementById("story").innerHTML += "<button onClick='rightriddle2()'>The horse's name is Friday</button>";
+											document.getElementById("story").innerHTML += "<button onClick='wrongriddle2()'>He used a time machine</button>";
+										}, 10);
+									}, 10);
+								}, 10);
+							}, 10);
 		break;
-
-			
-
-		
 		case "The Towers":
 			break;
 			}
