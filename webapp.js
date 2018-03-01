@@ -32,7 +32,6 @@ function thecrash() {
 			document.getElementById("forest").disabled = true;
 			stagename = "Forest";
 			update_scene(stagename);
-<<<<<<< HEAD
 		}
 	//RightRiddles
 	function RightRiddle1() {
@@ -54,7 +53,6 @@ function thecrash() {
 	}
 	//Caves
 	function caves() {	
-=======
 			}
 			//Cabin
 			function cabin() {	
@@ -69,7 +67,23 @@ function thecrash() {
 		document.getElementById("caves").style.backgroundColor = "rgba(256, 0, 0, 1.0)";
 		document.getElementById("caves").style.borderColor = "rgba(255, 0, 0, 1.0)";
 		document.getElementById("caves").disabled = true;
->>>>>>> 34b61ee2bf1da841dd7937de62afeeaf0bce4b25
+		stagename = "Caves";
+		update_scene(stagename);
+	}
+			}
+			//Cabin
+			function cabin() {	
+				document.getElementById("cabin").style.backgroundColor = "rgba(256, 0, 0, 1.0)";
+				document.getElementById("cabin").style.borderColor = "rgba(255, 0, 0, 1.0)";
+				document.getElementById("cabin").disabled = true;
+				stagename = "cabin";
+				update_scene(stagename);
+			}
+		//Caves
+		function caves() {	
+		document.getElementById("caves").style.backgroundColor = "rgba(256, 0, 0, 1.0)";
+		document.getElementById("caves").style.borderColor = "rgba(255, 0, 0, 1.0)";
+		document.getElementById("caves").disabled = true;
 		stagename = "Caves";
 		update_scene(stagename);
 	}
@@ -273,7 +287,6 @@ function update_scene(s) {
 		case "Treasure":
 			new_message("You take the treasure...");
 				setTimeout(function(){
-<<<<<<< HEAD
 			new_message("A trap triggers a riddle for you to solve");
 				setTimeout(function() {
 			new_message("Imagine you are in a dark room. How do you get out?");
@@ -282,7 +295,6 @@ function update_scene(s) {
 					document.getElementById("story").innerHTML += "<button onClick='WrongRiddle1()'>Keep running until you find a way out</button";
 							}, 10);
 							}, 10);
-=======
 					new_message("A trap triggers a riddle for you to solve");
 						setTimeout(function() {
 							new_message("Imagine you are in a dark room. How do you get out?");
@@ -290,7 +302,6 @@ function update_scene(s) {
 									document.getElementById("story").innerHTML += "<button onClick='rightriddle3()'>Stop imagining</button";
 									document.getElementById("story").innerHTML += "<button onClick='wrongriddle3()'>Keep running until you find a way out</button";
 								}, 10);
->>>>>>> 34b61ee2bf1da841dd7937de62afeeaf0bce4b25
 							}, 10);
 						}, 10);
 			break;			
@@ -357,7 +368,6 @@ break;
 								}, 10);
 							}, 10);
 		break;
-<<<<<<< HEAD
 		case "RightRiddle2":
 		new_message("You are worthy of my armor");
 			setTimeout(function(){
@@ -373,8 +383,6 @@ break;
 			}, 10);
 			}, 10);
 	break;
-				
-=======
 		case "The Towers":
 new_message("Ooh heck an alarm is sounding");
 setTimeout(function() {
@@ -385,8 +393,6 @@ document.getElementById("story").innerHTML += "<button onClick='goinside()'>Ok w
 }, 10);
 }, 10);
 break;
->>>>>>> 34b61ee2bf1da841dd7937de62afeeaf0bce4b25
-
 case "runout":
 new_message("testing run out");
 setTimeout(function() {
