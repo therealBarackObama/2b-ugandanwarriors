@@ -74,9 +74,34 @@ function thecrash() {
 			update_scene(stagename);
 			}
 //The Towers
-function thetowers() {	
-	stagename = "The Towers";
-	update_scene(stagename);
+function thetowers() {
+stagename = "TheTowers";
+update_scene(stagename);
+}
+//runout
+function runout() {
+stagename = "runout";
+update_scene(stagename);
+}
+//Continue
+function goinside() {
+stagename = "goinside";
+update_scene(stagename);
+}
+//Finding back way
+function backway() {
+stagename = "backway";
+update_scene(stagename);
+}
+//Going deeper
+function godeeper() {
+stagename = "godeeper";
+update_scene(stagename);
+}
+//seeing door
+function seesdoor() {
+stagename = "seesdoor";
+update_scene(stagename);
 }
 //Various scenes
 function update_scene(s) {
@@ -272,7 +297,52 @@ function update_scene(s) {
 							}, 10);
 		break;
 		case "The Towers":
-			break;
+new_message("Ooh heck an alarm is sounding");
+setTimeout(function() {
+new_message("what do i do");
+setTimeout(function() {
+document.getElementById("story").innerHTML += "<button onClick='runout()'>I guess i will run out</button>";
+document.getElementById("story").innerHTML += "<button onClick='goinside()'>Ok well lets yolo and run in</button>";
+}, 10);
+}, 10);
+break;
+
+case "runout":
+new_message("testing run out");
+setTimeout(function() {
+document.getElementById("story").innerHTML += "<button onClick='goinside()'>Ok imma b dumb and run inside again</button>";
+document.getElementById("story").innerHTML += "<button onClick='backway()'>ok lets take the smart move and try to find a back way</button>";
+}, 10);
+break;
+
+case "goinside":
+new_message("ok lets run inisde and die");
+setTimeout(function() {
+new_message("this is very dumb");
+setTimeout(function() {
+new_message("ok im inside where do i go");
+setTimeout(function() {
+document.getElementById("story").innerHTML += "<button onClick='godeeper()'>lets continue but lets be careful</button>";
+document.getElementById("story").innerHTML += "<button onClick='runout()'>i regret this imma run outside, i cant do it</button>";
+}, 10);
+}, 10);
+}, 10);
+break;
+
+case "backway":
+new_message("testing backway");
+setTimeout(function() {
+document.getElementById("story").innerHTML += "<button onClick='seesdoor()'>ooh a door</button>";
+document.getElementById("story").innerHTML += "<button onClick='runout()'>oOh scary door</button>";
+}, 10);
+break;
+
+case "godeeper":
+new_message("ok lets venture deeper");
+setTimeout(function() {
+}, 10);
+break;
+
 			}
 		}
                   
